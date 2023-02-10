@@ -1,7 +1,4 @@
 #include QMK_KEYBOARD_H
-// #include "rgblight.h"
-#include "rgb_matrix.h"
-
 
 /* THIS FILE WAS GENERATED!
  *
@@ -9,26 +6,133 @@
  * edit it directly.
  */
 
-// rgblight_setrgb(0,255,0);
+enum custom_keycodes { MKR_ARROW = SAFE_RANGE, MKR_ARROW_FN, MKR_QUOTE, MKR_CURLY, MKR_BRACKET, MKR_ARRAY };
 
-rgb_matrix_set_color_all(0, 255, 0);
-
-const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-	[0] = LAYOUT(KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, LSFT_T(KC_A), LT(5,KC_S), LT(1,KC_D), LT(3,KC_F), KC_G, KC_H, LT(4,KC_J), LT(2,KC_K), LT(6,KC_L), LSFT_T(KC_SCLN), KC_Z, LCTL_T(KC_X), LALT_T(KC_C), KC_V, KC_B, KC_N, KC_M, LALT_T(KC_COMM), LCTL_T(KC_DOT), KC_SLSH, KC_P0, KC_BSPC, LT(7,KC_SPC), KC_P1),
-	[1] = LAYOUT(RGB_TOG, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, KC_BTN1, KC_WH_U, KC_BTN2, KC_TRNS, KC_TRNS, KC_BTN2, KC_NO, KC_BTN1, KC_TRNS, KC_TRNS, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, KC_TRNS, RGB_RMOD, RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD, KC_WH_L, KC_WH_D, KC_WH_R, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
-	[2] = LAYOUT(KC_TRNS, KC_TRNS, KC_PGUP, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_LEFT, KC_UP, KC_DOWN, KC_RGHT, KC_TRNS, KC_TRNS, KC_LGUI, KC_NO, LCTL(KC_LALT), LCA(KC_LSFT), KC_TRNS, KC_HOME, KC_PGDN, KC_END, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
-	[3] = LAYOUT(KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_UNDS, KC_PIPE, KC_QUOT, KC_TRNS, KC_CIRC, KC_ASTR, KC_AMPR, KC_NO, KC_TRNS, KC_HASH, KC_TILD, KC_SLSH, KC_DQUO, KC_DLR, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MINS, KC_BSLS, KC_GRV, KC_TRNS, RGB_RMOD, KC_TRNS, KC_TRNS, RGB_MOD),
-	[4] = LAYOUT(KC_TRNS, KC_COLN, KC_LT, KC_GT, KC_SCLN, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_LCBR, KC_RCBR, KC_LPRN, KC_RPRN, KC_AT, KC_TRNS, KC_NO, KC_EQL, KC_PLUS, KC_PERC, KC_TRNS, KC_EXLM, KC_LBRC, KC_RBRC, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_VOLD, KC_TRNS, KC_TRNS, KC_VOLU),
-	[5] = LAYOUT(KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_F7, KC_F8, KC_F9, KC_F10, KC_TRNS, KC_NO, LCTL(KC_LALT), KC_TRNS, KC_TRNS, KC_TRNS, KC_F4, KC_F5, KC_F6, KC_F11, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_F1, KC_F2, KC_F3, KC_F12, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
-	[6] = LAYOUT(KC_PSLS, KC_7, KC_8, KC_9, KC_PPLS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_0, KC_1, KC_2, KC_3, KC_PMNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_TRNS, KC_PAST, KC_4, KC_5, KC_6, KC_PEQL, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
-	[7] = LAYOUT(KC_TRNS, KC_TRNS, KC_COLN, KC_ESC, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_DEL, KC_TRNS, KC_PERC, KC_SLSH, KC_ENT, KC_TRNS, DF(1), KC_LGUI, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_EXLM, KC_TRNS, DF(0), KC_TRNS, RALT_T(KC_COMM), RCTL_T(KC_DOT), QK_BOOT, KC_TRNS, KC_TAB, KC_NO, KC_TRNS)
-};
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {[0] = LAYOUT(KC_Q, KC_W, KC_F, KC_P, KC_B, KC_J, KC_L, KC_U, KC_Y, KC_BSPC, KC_A, KC_R, KC_S, KC_T, KC_G, KC_M, KC_N, KC_E, KC_I, KC_O, KC_Z, KC_X, KC_C, KC_D, KC_V, KC_K, KC_H, KC_LBRC, KC_RBRC, KC_ENT, LSFT_T(OSM(MOD_LCTL)), KC_SPC, LT(1, OSM(MOD_LALT)), LT(2, OSM(MOD_LGUI))),
+                                                              [1] = LAYOUT(KC_PMNS, KC_PPLS, KC_7, KC_8, KC_9, KC_MINS, KC_EQL, KC_F3, KC_F12, LT(3, KC_NO), KC_PSLS, KC_PAST, KC_4, KC_5, KC_6, KC_SCLN, KC_QUOT, KC_BSLS, KC_SLSH, LT(4, KC_NO), KC_PENT, KC_0, KC_1, KC_2, KC_3, KC_LBRC, KC_RBRC, KC_COMM, KC_DOT, LT(5, KC_NO), KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
+                                                              [2] = LAYOUT(KC_ESC, KC_BRID, KC_BRIU, KC_VOLD, KC_VOLU, MKR_QUOTE, MKR_CURLY, KC_TRNS, KC_TRNS, TG(6), KC_TAB, KC_MRWD, KC_MSTP, KC_MPLY, KC_MFFD, MKR_ARROW, MKR_ARROW_FN, KC_GRV, KC_SLSH, TG(7), KC_DEL, KC_NO, KC_NO, KC_NO, KC_NO, MKR_BRACKET, MKR_ARRAY, KC_COMM, KC_DOT, TG(8), KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
+                                                              [3] = LAYOUT(KC_F1, KC_F2, KC_F3, KC_F4, KC_NO, KC_F13, KC_F14, KC_F15, KC_F16, KC_NO, KC_F5, KC_F6, KC_F7, KC_F8, KC_NO, KC_F17, KC_F18, KC_F19, KC_F20, KC_NO, KC_F9, KC_F10, KC_F11, KC_F12, KC_NO, KC_F21, KC_F22, KC_F23, KC_F24, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
+                                                              [4] = LAYOUT(KC_ACL0, KC_BTN1, KC_BTN2, KC_WH_U, KC_WH_D, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_ACL1, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_ACL2, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
+                                                              [5] = LAYOUT(KC_NO, KC_NO, KC_PSCR, KC_SCRL, KC_PAUS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_INS, KC_HOME, KC_PGUP, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_DEL, KC_END, KC_PGDN, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
+                                                              [6] = LAYOUT(RGB_TOG, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, RGB_MOD, RGB_VAI, RGB_VAD, RGB_SPI, RGB_SPD, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, RGB_RMOD, BL_STEP, BL_BRTG, BL_INC, BL_DEC, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
+                                                              [7] = LAYOUT(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
+                                                              [8] = LAYOUT(KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_ENT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_M, KC_N, KC_COMM, KC_DOT, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS)};
 
 void keyboard_pre_init_user(void) {
-  // Set our LED pin as output
-  setPinOutput(24);
-  // Turn the LED off
-  // (Due to technical reasons, high is off and low is on)
-  writePinHigh(24);
+    // Set our LED pin as output
+    setPinOutput(24);
+    // Turn the LED off
+    // (Due to technical reasons, high is off and low is on)
+    writePinHigh(24);
 }
 
+bool process_record_user(uint16_t keycode, keyrecord_t* record) {
+    switch (keycode) {
+        case MKR_ARROW: // =>
+            if (record->event.pressed) {
+                SEND_STRING("=>");
+            }
+            return false;
+
+        case MKR_ARROW_FN: // = () => {|}
+            if (record->event.pressed) {
+                SEND_STRING("=()=>{}");
+                tap_code(KC_LEFT);
+            }
+            return false;
+        case MKR_QUOTE: // "|"
+            if (record->event.pressed) {
+                register_code(KC_LSFT);
+                tap_code(KC_QUOT);
+                tap_code(KC_QUOT);
+                unregister_code(KC_LSFT);
+                tap_code(KC_LEFT);
+            }
+            return false;
+        case MKR_CURLY: // {|}
+            if (record->event.pressed) {
+                SEND_STRING("{}");
+                tap_code(KC_LEFT);
+            }
+            return false;
+        case MKR_BRACKET: // (|)
+            if (record->event.pressed) {
+                SEND_STRING("()");
+                tap_code(KC_LEFT);
+            }
+            return false;
+        case MKR_ARRAY: // [|]
+            if (record->event.pressed) {
+                SEND_STRING("[]");
+                tap_code(KC_LEFT);
+            }
+            return false;
+    }
+    return true;
+}
+
+bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
+    uint8_t r = 50;
+    uint8_t g = 50;
+    uint8_t b = 230;
+
+    switch (get_highest_layer(layer_state | default_layer_state)) {
+        case 8:
+            r = 230;
+            g = 50;
+            b = 50;
+            break;
+        case 7:
+            r = 230;
+            g = 10;
+            b = 50;
+            break;
+        case 6:
+            r = 230;
+            g = 50;
+            b = 10;
+            break;
+        case 5:
+            r = 50;
+            g = 230;
+            b = 50;
+            break;
+        case 4:
+            r = 10;
+            g = 230;
+            b = 50;
+            break;
+        case 3:
+            r = 50;
+            g = 230;
+            b = 10;
+            break;
+        case 2:
+            r = 230;
+            g = 10;
+            b = 230;
+            break;
+        case 1:
+            r = 10;
+            g = 230;
+            b = 230;
+            break;
+
+        default:
+            break;
+    }
+
+    for (uint8_t i = led_min; i < led_max; i++) {
+        if (i < 6 || (i > 22 && i < 29)) {
+            // underglow/bottom plate
+            rgb_matrix_set_color(i, r, g, b);
+        } else if ((i > 20 && i < 23) || (i > 43 && i < 46)) {
+            // thumb keys backlight
+            rgb_matrix_set_color(i, RGB_BLUE);
+        } else {
+            // standard keys backlight
+            rgb_matrix_set_color(i, RGB_PINK);
+        }
+    }
+    return false;
+}

@@ -27,6 +27,8 @@
 #    define ENABLE_RGB_MATRIX_RAINBOW_BEACON
 #endif
 
+#define SPLIT_LAYER_STATE_ENABLE
+
 // Not yet available in `keymap.json` format
 #ifdef MOUSEKEY_ENABLE
      // The default is 100
