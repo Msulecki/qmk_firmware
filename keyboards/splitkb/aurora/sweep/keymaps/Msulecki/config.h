@@ -16,19 +16,19 @@
 
 #pragma once
 
-
-
 // Not yet available in `keymap.json` format
 #ifdef RGB_MATRIX_ENABLE
 #    define RGB_DISABLE_WHEN_USB_SUSPENDED
 #endif
 
+#define SPLIT_TRANSACTION_IDS_USER USER_SYNC_A
+// #define SPLIT_TRANSACTION_IDS_KB KEYBOARD_SYNC_A
 #define SPLIT_LAYER_STATE_ENABLE
 
 // Not yet available in `keymap.json` format
 #ifdef MOUSEKEY_ENABLE
-     // The default is 100
+// The default is 100
 #    define MOUSEKEY_WHEEL_INTERVAL 50
-     // The default is 40
+// The default is 40
 #    define MOUSEKEY_WHEEL_TIME_TO_MAX 100
 #endif
