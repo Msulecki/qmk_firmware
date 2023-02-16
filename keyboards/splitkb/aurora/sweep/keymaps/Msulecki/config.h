@@ -22,7 +22,6 @@
 #endif
 
 #define SPLIT_TRANSACTION_IDS_USER USER_SYNC_A
-// #define SPLIT_TRANSACTION_IDS_KB KEYBOARD_SYNC_A
 #define SPLIT_LAYER_STATE_ENABLE
 
 // Not yet available in `keymap.json` format

@@ -13,6 +13,13 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+SRC += funcs/isInArr.c
+SRC += funcs/preInit.c
+SRC += funcs/rgbOffset.c
+SRC += funcs/rgbOperations.c
+SRC += funcs/keypressOperations.c
+SRC += funcs/m2sSync.c
+SRC += funcs/limitTo8Bit.c
 
 OLED_ENABLE = yes
 SPLIT_KEYBOARD = yes
